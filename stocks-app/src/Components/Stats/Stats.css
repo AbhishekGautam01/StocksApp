@@ -28,3 +28,7 @@
     font-weight: 500;
   }
 
+  .stats__list{
+    border-top: 1px solid #42494D;
+  }
+
