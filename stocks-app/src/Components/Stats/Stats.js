@@ -14,7 +14,6 @@ function Stats() {
 
   const getMyStocks = () => {
     db.collection("myStocks").onSnapshot((snapshot) => {
-      console.log(snapshot.docs);
       let promises = [];
       let tempData = [];
       snapshot.docs.map((doc) => {
@@ -47,7 +46,6 @@ function Stats() {
     stocksList.map((stock) => {
       promises.push(
         getStockData(stock).then((res) => {
-          console.log(res);
           tempStockData.push({
             name: stock,
             ...res.data,
@@ -56,7 +54,6 @@ function Stats() {
       );
     });
     Promise.all(promises).then(() => {
-      console.log(tempStockData);
       setStockData(tempStockData);
     });
   }, []);
