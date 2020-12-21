@@ -31,8 +31,12 @@
     padding-bottom: 4px;
 }
 
-.row__percentage{
+.row__percentage__positive{
     color: #5AC53B;
+}
+
+.row__percentage__negative{
+    color: red;
 }
 
 .row__chart{
